@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pavan Kumar Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  
+  <script src="./script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <h1>Pavan Kumar</h1>
+      <nav>
+        <ul>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contact">Get in Touch</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>  
+
+  <main>
+    <!-- Intro Section -->
+    <section class="intro">
+      <div class="intro-content">
+        <h2>Hi, I AM Pavan Kumar Adinani</h2>
+        <h3>a <span class="highlight">AI/ML Engineer.</span></h3>
+        <p>
+          I’m passionate about harnessing the power of AI and machine learning to solve complex real-world challenges. Skilled in designing and deploying neural networks for image processing, NLP, and deep learning using frameworks like TensorFlow and PyTorch. My expertise also extends to web development and IoT, where I create seamless, intelligent solutions that bridge the digital and physical worlds.
+        </p>
+        <button class="darksoul-hover-fill-button1" type="button"
+          onclick="window.open('https://drive.google.com/file/d/15ifcOhwBzQXvlnPoR1ZoeiGO34tx558X/view?usp=sharing', '_blank')">
+          <div class="color-fill-1"></div>
+          <p>Resume</p>
+        </button>
+      </div>
+      <div class="profile-picture">
+        <div class="picture-frame">
+          <img src="Pavan.jpg" alt="Pavan Kumar" />
+        </div>
+      </div>      
+    </section>
+    
+
+    <!-- Skills and Certifications -->
+    <section id="skills" class="skills-certifications">
+      <div class="skills">
+        <h3>Skills</h3>
+        <div id="radar-chart-wrapper">
+          <canvas id="radar-chart"></canvas>
+        </div>
+      </div>
+      <div class="certifications">
+        <h3>Certifications</h3>
+        <ul>
+          <li>
+            <a>
+              IBM AI Engineering Professional Certificate (V2)
+            </a>
+          </li>
+          <li>
+            <a>
+              Amazon Web Services Cloud Practitioner
+            </a>
+          </li>
+          <li>
+            <a>
+              Google Cloud Certified Associate Cloud Engineer
+            </a>
+          </li>
+          <li>
+            <a>
+              Microsoft Certified: Azure AI Fundamentals
+            </a>
+          </li>
+          <li>
+            <a>
+              Microsoft Certified: Azure Data Fundamentals
+            </a>
+          </li>
+          <li>
+            <a>
+              Microsoft Certified: Azure Fundamentals
+            </a>
+          </li>
+        
+      </div>
+    </section>
+
+  <section id="work" class="projects">
+    <h3>Projects</h3>
+    <div class="project-cards">
+      <div class="project-card">
+        <img src="HSV_Mask.jpeg" alt="VisionAI Web Application">
+        <h4>VisionAI Web Application</h4>
+        <p>
+          A Flask web application with real-time video processing features such as object detection, hand gesture recognition, and more. A customizable and interactive tool to explore various computer vision tasks.
+        </p>
+        <a href="https://github.com/pavanKumar2812/VisionAI-WebSite" target="_blank">View on GitHub</a>
+      </div>
+  
+      <div class="project-card">
+        <img src="Deep Learning Models.webp" alt="Deep Learning Models (CNN, LSTM, GAN)">
+        <h4>Deep Learning Models (CNN, LSTM, GAN)</h4>
+        <p>
+          A collection of deep learning notebooks showcasing CNNs, LSTMs, Bi-directional LSTMs, GANs, and more. Explore state-of-the-art machine learning techniques for diverse applications.
+        </p>
+        <a href="https://github.com/pavanKumar2812/TensorFlow" target="_blank">View on GitHub</a>
+      </div>
+  
+      <div class="project-card">
+        <img src="VIT.webp" alt="Image Classification with Vision Transformer">
+        <h4>Image Classification with Vision Transformer</h4>
+        <p>
+          A detailed notebook and trained model (.h5) for image classification tasks using Vision Transformer (ViT) architecture, designed for high accuracy and performance.
+        </p>
+        <a href="https://github.com/pavanKumar2812/TensorFlow" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+  
+  <section id="contact" class="contact">
+    <h3>Contact Me</h3>
+    <div class="contact-details">
+      <p><strong>Phone:</strong> <a href="tel:+918179090163">8179090163</a></p>
+      <p><strong>Email:</strong> <a href="mailto:adinanipavankumar@gmail.com">adinanipavankumar@gmail.com</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/pavan-kumar-adinani-924272232" target="_blank">View Profile</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/pavanKumar2812" target="_blank">View Profile</a></p>
+    </div>
+    <div class="footer-note">
+      <p>© All rights reserved – Pavan Kumar Adinani</p>
+    </div>
+  </section>  
+
+</main>
+</body>
+</html>
