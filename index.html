@@ -1,141 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pavan Kumar Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  
-  <script src="./script.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Pavan Kumar | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@1.5.7/dist/lottie-player.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f1f5;
+            color: #2e2e2e;
+        }
+        .logo-font {
+            font-family: 'Gwendolyn', cursive;
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <div class="navbar">
-      <h1>Pavan Kumar</h1>
-      <nav>
-        <ul>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#contact">Get in Touch</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>  
-
-  <main>
-    <!-- Intro Section -->
-    <section class="intro">
-      <div class="intro-content">
-        <h2>Hi, I AM Pavan Kumar Adinani</h2>
-        <h3>a <span class="highlight">AI/ML Engineer.</span></h3>
-        <p>
-          I’m passionate about harnessing the power of AI and machine learning to solve complex real-world challenges. Skilled in designing and deploying neural networks for image processing, NLP, and deep learning using frameworks like TensorFlow and PyTorch. My expertise also extends to web development and IoT, where I create seamless, intelligent solutions that bridge the digital and physical worlds.
-        </p>
-        <button class="darksoul-hover-fill-button1" type="button"
-          onclick="window.open('https://drive.google.com/file/d/1KGSEcbrmQPxYP1jgda2Jt7aLEB58mvUL/view?usp=sharing', '_blank')">
-          <div class="color-fill-1"></div>
-          <p>Resume</p>
-        </button>
-      </div>
-      <div class="profile-picture">
-        <div class="picture-frame">
-          <img src="Pavan.jpg" alt="Pavan Kumar" />
+<body class="bg-[#f0f1f5] text-[#2e2e2e]">
+    <nav class="bg-[#f0f1f5] border-b border-[#d1d5db] fixed top-0 w-full z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="text-2xl md:text-4xl font-extrabold text-[#373f4e] logo-font">
+                    Pavan Kumar
+                </div>
+                <ul class="hidden md:flex space-x-6 text-md font-medium">
+                    <li><a href="#home" class="hover:text-[#4e576a] transition">Home</a></li>
+                    <li><a href="#skills" class="hover:text-[#4e576a] transition">Skills</a></li>
+                    <li><a href="#projects" class="hover:text-[#4e576a] transition">Projects</a></li>
+                    <li><a href="#certifications" class="hover:text-[#4e576a] transition">Certifications</a></li>
+                    <li><a href="#contact" class="hover:text-[#4e576a] transition">Contact</a></li>
+                </ul>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-[#373f4e] hover:text-[#4e576a] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#4e576a]" aria-expanded="false" aria-controls="mobile-menu">
+                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-5h18V3H3v2z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>      
-    </section>
-    
-
-    <!-- Skills and Certifications -->
-    <section id="skills" class="skills-certifications">
-      <div class="skills">
-        <h3>Skills</h3>
-        <div id="radar-chart-wrapper">
-          <canvas id="radar-chart"></canvas>
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-[#373f4e] hover:text-[#4e576a] hover:bg-gray-100 transition">Home</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-[#373f4e] hover:text-[#4e576a] hover:bg-gray-100 transition">Skills</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-[#373f4e] hover:text-[#4e576a] hover:bg-gray-100 transition">Projects</a>
+                <a href="#certifications" class="block px-3 py-2 rounded-md text-base font-medium text-[#373f4e] hover:text-[#4e576a] hover:bg-gray-100 transition">Certifications</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-[#373f4e] hover:text-[#4e576a] hover:bg-gray-100 transition">Contact</a>
+            </div>
         </div>
-      </div>
-      <div class="certifications">
-        <h3>Certifications</h3>
-        <ul>
-          <li>
-            <a>
-              IBM AI Engineering Professional Certificate (V2)
-            </a>
-          </li>
-          <li>
-            <a>
-              Amazon Web Services Cloud Practitioner
-            </a>
-          </li>
-          <li>
-            <a>
-              Google Cloud Certified Associate Cloud Engineer
-            </a>
-          </li>
-          <li>
-            <a>
-              Microsoft Certified: Azure AI Fundamentals
-            </a>
-          </li>
-          <li>
-            <a>
-              Microsoft Certified: Azure Data Fundamentals
-            </a>
-          </li>
-          <li>
-            <a>
-              Microsoft Certified: Azure Fundamentals
-            </a>
-          </li>
-        
-      </div>
+    </nav>
+
+    <section id="home" class="relative pt-24 pb-16 px-4 bg-gradient-to-r from-[#f0f4f8] via-[#e0e4e8] to-[#c0c4c8]">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-8 md:gap-10">
+            <div class="md:w-1/2">
+                <h2 class="text-3xl sm:text-4xl font-extrabold mb-3 text-[#373f4e]">
+                    Hi, I'm <span class="text-[#4e576a]">Pavan Kumar</span> 👋
+                </h2>
+                <p class="text-lg sm:text-xl font-light text-gray-500 leading-relaxed mb-4">
+                    AI/ML Engineer | Computer Vision Engineer
+                </p>
+                <p class="text-lg sm:text-xl font-normal text-gray-800 leading-relaxed mb-6">
+                    Crafting intelligent solutions through AI.
+                </p>
+                <a href="#projects" class="inline-block bg-[#373f4e] text-white px-6 py-2 rounded-full shadow-lg hover:bg-[#2c3444] transition duration-300 font-semibold mt-4">
+                    View My Projects
+                </a>
+            </div>
+            <div class="md:w-1/2 mt-8 md:mt-0">
+                <lottie-player
+                    src="https://assets5.lottiefiles.com/packages/lf20_2LdLki.json"
+                    background="transparent"
+                    speed="1"
+                    style="width: 100%; max-width: 400px; height: auto;"
+                    loop
+                    autoplay
+                ></lottie-player>
+            </div>
+            </div>
     </section>
 
-  <section id="work" class="projects">
-    <h3>Projects</h3>
-    <div class="project-cards">
-      <div class="project-card">
-        <img src="HSV_Mask.jpeg" alt="VisionAI Web Application">
-        <h4>VisionAI Web Application</h4>
-        <p>
-          A Flask web application with real-time video processing features such as object detection, hand gesture recognition, and more. A customizable and interactive tool to explore various computer vision tasks.
-        </p>
-        <a href="https://github.com/pavanKumar2812/VisionAI-WebSite" target="_blank">View on GitHub</a>
-      </div>
-  
-      <div class="project-card">
-        <img src="Deep Learning Models.webp" alt="Deep Learning Models (CNN, LSTM, GAN)">
-        <h4>Deep Learning Models (CNN, LSTM, GAN)</h4>
-        <p>
-          A collection of deep learning notebooks showcasing CNNs, LSTMs, Bi-directional LSTMs, GANs, and more. Explore state-of-the-art machine learning techniques for diverse applications.
-        </p>
-        <a href="https://github.com/pavanKumar2812/TensorFlow" target="_blank">View on GitHub</a>
-      </div>
-  
-      <div class="project-card">
-        <img src="VIT.webp" alt="Image Classification with Vision Transformer">
-        <h4>Image Classification with Vision Transformer</h4>
-        <p>
-          A detailed notebook and trained model (.h5) for image classification tasks using Vision Transformer (ViT) architecture, designed for high accuracy and performance.
-        </p>
-        <a href="https://github.com/pavanKumar2812/TensorFlow" target="_blank">View on GitHub</a>
-      </div>
-    </div>
-  </section>
-  
-  <section id="contact" class="contact">
-    <h3>Contact Me</h3>
-    <div class="contact-details">
-      <p><strong>Phone:</strong> <a href="tel:+918179090163">8179090163</a></p>
-      <p><strong>Email:</strong> <a href="mailto:adinanipavankumar@gmail.com">adinanipavankumar@gmail.com</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/pavan-kumar-adinani-924272232" target="_blank">View Profile</a></p>
-      <p><strong>GitHub:</strong> <a href="https://github.com/pavanKumar2812" target="_blank">View Profile</a></p>
-    </div>
-    <div class="footer-note">
-      <p>© All rights reserved – Pavan Kumar Adinani</p>
-    </div>
-  </section>  
-
-</main>
+    <section id="skills" class="py-16 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-center text-[#373f4e] mb-8">My Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6 flex items-center space-x-4">
+                    <img src="images/python-icon.png" alt="Python Icon" class="w-8 h-8" />
+                    <span class="font-semibold">Python</span>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex items-center space-x-4">
+                    <img src="images/javascript-icon.png" alt="JS Icon" class="w-8 h-8" />
+                    <span class="font-semibold">JavaScript</span>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex items-center space-x-4">
+                    <img src="images/sql-icon.png" alt="sql Icon" class="w-8 h-8" />
+                    <span class="font-semibold">SQL</span>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex items-center space-x-4">
+                    <img src="images/flask-icon.png" alt="Flask Icon" class="w-8 h-8" />
+                    <span class="font-semibold">Flask</span>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex items-center space-x-4">
+                    <img src="images/Langchain-icon.png" alt="Langchain Icon" class="w-8 h-8" />
+                    <span class="font-semibold">Langchain</span>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex items-center space-x-4">
+                    <img src="images/OpenCV-icon.png" alt="OpenCV Icon" class="w-8 h-8" />
+                    <span class="font-semibold">OpenCV</span>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex items-center space-x-4">
+                    <img src="images/TensorFlow-icon.png" alt="TensorFlow Icon" class="w-8 h-8" />
+                    <span class="font-semibold">TensorFlow</span>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex items-center space-x-4">
+                    <img src="images/PyTorch-icon.png" alt="PyTorch Icon" class="w-8 h-8" />
+                    <span class="font-semibold">PyTorch</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        $(document).ready(function () {
+            // Mobile Menu Toggle
+            $('#mobile-menu-button').click(function () {
+                $('#mobile-menu').toggleClass('hidden');
+                $(this).attr('aria-expanded', !$(this).attr('aria-expanded') === 'true');
+            });
+        });
+    </script>
 </body>
 </html>
