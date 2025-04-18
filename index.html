@@ -136,5 +136,131 @@
             });
         });
     </script>
+
+<section id="projects" class="py-16 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-extrabold text-center text-[#373f4e] mb-8">My Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="project-card bg-white rounded-lg shadow-md overflow-hidden">
+               <!-- Video Thumbnail Card -->
+               <div class="cursor-pointer" onclick="openModal('./videos/ResumeRAG_HuggingFaceLangchain.mp4')">
+                <video muted autoplay loop playsinline class="rounded-lg w-full h-auto object-cover">
+                  <source src="./videos/ResumeRAG_HuggingFaceLangchain.mp4" type="video/mp4" />
+                </video>
+              </div>
+              
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-[#373f4e] mb-2">AI Job Assistant</h3>
+                    <p class="text-gray-600 text-sm mb-4">End-to-end tool to scrape LinkedIn job posts, analyze job market trends visually, and auto-generate resumes & cover letters using Mistral-7B.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://github.com/pavanKumar2812/langchain/tree/main/ResumeRAG" class="text-gray-700 hover:underline text-sm font-medium" target="_blank">GitHub</a>
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7314263439281995776/" class="text-indigo-500 hover:underline text-sm font-medium" target="_blank">LinkedIn Post</a>
+                    </div>
+                    <div class="mt-4">
+                        <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#AI</span>
+                        <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#JobSearch</span>
+                        <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#Streamlit</span>
+                        <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#LangChain</span>
+                        <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#LLM</span>
+                        <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#HuggingFace</span>
+                        <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#ResumeBuilder</span>
+                        <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#Python</span>
+                        <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#OpenSource</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </div>
+    <!-- Modal Background -->
+<!-- Video Modal -->
+<div id="videoModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+    <div class="relative bg-black rounded-lg shadow-lg max-w-4xl w-full">
+  
+      <!-- Close Button -->
+      <button onclick="closeModal()" class="absolute top-2 right-2 text-white text-4xl font-bold z-50 hover:text-gray-300">&times;</button>
+  
+      <!-- Video Player without download -->
+      <video id="modalVideo" class="w-full h-auto rounded-lg" autoplay muted playsinline controls controlsList="nodownload">
+        <source id="modalVideoSource" src="" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+  
+  
+</section>
+
+<style>
+    .project-card {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    .project-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    .video-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 0.5rem;
+        background-color: #e2e8f0; /* Placeholder */
+    }
+    .video-container video {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Ensure video covers the container */
+    }
+    .play-overlay {
+        opacity: 1;
+        transition: opacity 0.2s ease-in-out;
+    }
+    .video-container:hover .play-overlay {
+        opacity: 0.8;
+    }
+    .video-container.playing .play-overlay {
+        display: none;
+    }
+</style>
+
+<script>
+    $(document).ready(function () {
+        $('.video-container').each(function() {
+            const videoContainer = $(this);
+            const video = videoContainer.find('video')[0];
+            const playOverlay = videoContainer.find('.play-overlay');
+
+            videoContainer.on('click', function() {
+                if (video.paused || video.ended) {
+                    video.play().then(() => {
+                        videoContainer.addClass('playing');
+                    }).catch(error => {
+                        console.error("Error playing video:", error);
+                    });
+                } else {
+                    video.pause();
+                    videoContainer.removeClass('playing');
+                }
+            });
+        });
+    });
+    function openModal(videoPath) {
+    const modal = document.getElementById("videoModal");
+    const video = document.getElementById("modalVideo");
+    const source = document.getElementById("modalVideoSource");
+
+    source.src = videoPath;
+    video.load(); // Load new source
+    video.play();
+    modal.classList.remove("hidden");
+  }
+
+  function closeModal() {
+    const modal = document.getElementById("videoModal");
+    const video = document.getElementById("modalVideo");
+
+    video.pause();
+    modal.classList.add("hidden");
+  }
+</script>
+  
 </body>
 </html>
