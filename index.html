@@ -1,141 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pavan Kumar Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  
-  <script src="./script.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Pavan Kumar | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@1.5.7/dist/lottie-player.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="./index.js"></script>
 </head>
-<body>
-  <header>
-    <div class="navbar">
-      <h1>Pavan Kumar</h1>
-      <nav>
-        <ul>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#contact">Get in Touch</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>  
-
-  <main>
-    <!-- Intro Section -->
-    <section class="intro">
-      <div class="intro-content">
-        <h2>Hi, I AM Pavan Kumar Adinani</h2>
-        <h3>a <span class="highlight">AI/ML Engineer.</span></h3>
-        <p>
-          I’m passionate about harnessing the power of AI and machine learning to solve complex real-world challenges. Skilled in designing and deploying neural networks for image processing, NLP, and deep learning using frameworks like TensorFlow and PyTorch. My expertise also extends to web development and IoT, where I create seamless, intelligent solutions that bridge the digital and physical worlds.
-        </p>
-        <button class="darksoul-hover-fill-button1" type="button"
-          onclick="window.open('https://drive.google.com/file/d/1KGSEcbrmQPxYP1jgda2Jt7aLEB58mvUL/view?usp=sharing', '_blank')">
-          <div class="color-fill-1"></div>
-          <p>Resume</p>
-        </button>
-      </div>
-      <div class="profile-picture">
-        <div class="picture-frame">
-          <img src="Pavan.jpg" alt="Pavan Kumar" />
+<body class="bg-[#f0f1f5] text-[#2e2e2e]">
+    <nav class="bg-[#f0f1f5] border-b border-[#d1d5db] fixed top-0 w-full z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="text-2xl md:text-4xl font-extrabold text-[#373f4e] logo-font">
+                    Pavan Kumar
+                </div>
+                <ul class="hidden md:flex space-x-6 text-md font-medium">
+                    <li><a href="#home" class="hover:text-[#4e576a] transition">Home</a></li>
+                    <li><a href="#skills" class="hover:text-[#4e576a] transition">Skills</a></li>
+                    <li><a href="#projects" class="hover:text-[#4e576a] transition">Projects</a></li>
+                    <li><a href="#certifications" class="hover:text-[#4e576a] transition">Certifications</a></li>
+                    <li><a href="#contact" class="hover:text-[#4e576a] transition">Contact</a></li>
+                </ul>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-[#373f4e] hover:text-[#4e576a] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#4e576a]" aria-expanded="false" aria-controls="mobile-menu">
+                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-5h18V3H3v2z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>      
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-[#373f4e] hover:text-[#4e576a] hover:bg-gray-100 transition">Home</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-[#373f4e] hover:text-[#4e576a] hover:bg-gray-100 transition">Skills</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-[#373f4e] hover:text-[#4e576a] hover:bg-gray-100 transition">Projects</a>
+                <a href="#certifications" class="block px-3 py-2 rounded-md text-base font-medium text-[#373f4e] hover:text-[#4e576a] hover:bg-gray-100 transition">Certifications</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-[#373f4e] hover:text-[#4e576a] hover:bg-gray-100 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative pt-24 pb-16 px-4 bg-gradient-to-r from-[#f0f4f8] via-[#e0e4e8] to-[#c0c4c8]">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-8 md:gap-10">
+            <div class="md:w-1/2">
+                <h2 class="text-3xl sm:text-4xl font-extrabold mb-3 text-[#373f4e]">
+                    Hi, I'm <span class="text-[#4e576a]">Pavan Kumar</span> 👋
+                </h2>
+                <p class="text-lg sm:text-xl font-light text-gray-500 leading-relaxed mb-4">
+                    AI/ML Engineer | Computer Vision Engineer
+                </p>
+                <p class="text-lg sm:text-xl font-normal text-gray-800 leading-relaxed mb-6">
+                    Crafting intelligent solutions through AI.
+                </p>
+                <a href="#projects" class="inline-block bg-[#373f4e] text-white px-6 py-2 rounded-full shadow-lg hover:bg-[#2c3444] transition duration-300 font-semibold mt-4">
+                    View My Projects
+                </a>
+            </div>
+            <div class="md:w-1/2 mt-8 md:mt-0">
+                <lottie-player
+                    src="https://assets5.lottiefiles.com/packages/lf20_2LdLki.json"
+                    background="transparent"
+                    speed="1"
+                    style="width: 100%; max-width: 400px; height: auto;"
+                    loop
+                    autoplay
+                ></lottie-player>
+            </div>
+            </div>
+    </section>
+
+    <section id="skills" class="py-16 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-center text-[#373f4e] mb-8">My Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6 flex items-center space-x-4">
+                    <img src="images/python-icon.png" alt="Python Icon" class="w-8 h-8" />
+                    <span class="font-semibold">Python</span>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex items-center space-x-4">
+                    <img src="images/javascript-icon.png" alt="JS Icon" class="w-8 h-8" />
+                    <span class="font-semibold">JavaScript</span>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex items-center space-x-4">
+                    <img src="images/sql-icon.png" alt="sql Icon" class="w-8 h-8" />
+                    <span class="font-semibold">SQL</span>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex items-center space-x-4">
+                    <img src="images/flask-icon.png" alt="Flask Icon" class="w-8 h-8" />
+                    <span class="font-semibold">Flask</span>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex items-center space-x-4">
+                    <img src="images/Langchain-icon.png" alt="Langchain Icon" class="w-8 h-8" />
+                    <span class="font-semibold">Langchain</span>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex items-center space-x-4">
+                    <img src="images/OpenCV-icon.png" alt="OpenCV Icon" class="w-8 h-8" />
+                    <span class="font-semibold">OpenCV</span>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex items-center space-x-4">
+                    <img src="images/TensorFlow-icon.png" alt="TensorFlow Icon" class="w-8 h-8" />
+                    <span class="font-semibold">TensorFlow</span>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex items-center space-x-4">
+                    <img src="images/PyTorch-icon.png" alt="PyTorch Icon" class="w-8 h-8" />
+                    <span class="font-semibold">PyTorch</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="projects" class="py-16 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-extrabold text-center text-[#373f4e] mb-8">My Projects</h2>
+    
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    
+            <!-- AI Job Assistant Card -->
+            <div class="project-card bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="cursor-pointer" onclick="openModal('./videos/ResumeRAG_HuggingFaceLangchain.mp4')">
+                <video muted autoplay loop playsinline class="rounded-lg w-full h-auto object-cover">
+                <source src="./videos/ResumeRAG_HuggingFaceLangchain.mp4" type="video/mp4" />
+                </video>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-semibold text-[#373f4e] mb-2">AI Job Assistant</h3>
+                <p class="text-gray-600 text-sm mb-4">End-to-end tool to scrape LinkedIn job posts, analyze job market trends visually, and auto-generate resumes & cover letters using Mistral-7B.</p>
+                <div class="flex space-x-4 mt-4">
+                <a href="https://github.com/pavanKumar2812/langchain/tree/main/ResumeRAG" class="text-gray-700 hover:underline text-sm font-medium" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7314263439281995776/" class="text-indigo-500 hover:underline text-sm font-medium" target="_blank">LinkedIn Post</a>
+                </div>
+                <div class="mt-4">
+                <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#AI</span>
+                <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#JobSearch</span>
+                <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#Streamlit</span>
+                <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#LangChain</span>
+                <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#LLM</span>
+                <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#HuggingFace</span>
+                <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#ResumeBuilder</span>
+                <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#Python</span>
+                <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#OpenSource</span>
+                </div>
+            </div>
+            </div>
+    
+            <!-- Gen-Cartoon Card -->
+            <div class="project-card bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="cursor-pointer" onclick="openModal('./videos/GenCartoon_Demo.mp4')">
+                <video muted autoplay loop playsinline class="rounded-lg w-full h-auto object-cover">
+                <source src="./videos/GenCartoon_Demo.mp4" type="video/mp4" />
+                </video>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-semibold text-[#373f4e] mb-2">Gen Cartoon</h3>
+                <p class="text-gray-600 text-sm mb-4">Real-time image & video cartoonizer using GANs. Upload a pic or go live with your camera and watch the cartoon magic unfold!</p>
+                <div class="flex space-x-4 mt-4">
+                <a href="https://github.com/pavanKumar2812/CartoonGAN-Web-App" class="text-gray-700 hover:underline text-sm font-medium" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7271067962013302784/" class="text-indigo-500 hover:underline text-sm font-medium" target="_blank">LinkedIn Post</a>
+                </div>
+                <div class="mt-4">
+                <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#GAN</span>
+                <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#DeepLearning</span>
+                <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#OpenCV</span>
+                <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#Cartoonizer</span>
+                <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#TensorFlow</span>
+                <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#Flask</span>
+                </div>
+            </div>
+            </div>
+            
+            <!-- Formula Generator -->
+            <div class="project-card bg-white rounded-lg shadow-md overflow-hidden">
+
+                <div class="cursor-pointer" onclick="openModal('./videos/FormulaGenerator_Demo.mp4')">
+                    <video muted autoplay loop playsinline class="rounded-lg w-full h-auto object-cover">
+                    <source src="./videos/FormulaGenerator_Demo.mp4" type="video/mp4" />
+                    </video>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-[#373f4e] mb-2">Formula Generator</h3>
+                    <p class="text-gray-600 text-sm mb-4">Converts user-provided descriptions into LaTeX-rendered formula images using a Flask backend and jQuery frontend.</p>
+                    <div class="flex space-x-4 mt-4">
+                    <a href="https://github.com/pavanKumar2812/FormulaGenWebApp" class="text-gray-700 hover:underline text-sm font-medium" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7271776744863379457/" class="text-indigo-500 hover:underline text-sm font-medium" target="_blank">LinkedIn Post</a>
+                    </div>
+                    <div class="mt-4">
+                        <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#Flask</span>
+                        <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#jQuery</span>
+                        <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#Bootstrap</span>
+                        <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#LaTeX</span>
+                        <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#LLM</span>
+                        <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#OpenAI</span>
+                        <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#GeminiAI</span>
+                    </div>
+                </div>
+            </div>
+
+        <!-- PDF Query Application -->
+        <div class="project-card bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="cursor-pointer" onclick="openModal('./videos/PDFQuery_Demo.mp4')">
+            <video muted autoplay loop playsinline class="rounded-lg w-full h-auto object-cover">
+                <source src="./videos/PDFQuery_Demo.mp4" type="video/mp4" />
+            </video>
+            </div>
+            <div class="p-6">
+            <h3 class="text-xl font-semibold text-[#373f4e] mb-2">PDF Query Application</h3>
+            <p class="text-gray-600 text-sm mb-4">A natural language-powered tool to query and interact with uploaded PDFs using LangChain, FAISS, and Ollama Embeddings.</p>
+            <div class="flex space-x-4 mt-4">
+                <a href="https://github.com/pavanKumar2812/langchain/tree/main/PDFQueryApp" class="text-gray-700 hover:underline text-sm font-medium" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:xxxxxx" class="text-indigo-500 hover:underline text-sm font-medium" target="_blank">LinkedIn Post</a>
+            </div>
+            <div class="mt-4">
+                <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#AI</span>
+                <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#LangChain</span>
+                <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#Python</span>
+                <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#Streamlit</span>
+                <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#ProjectShowcase</span>
+                <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#NaturalLanguageProcessing</span>
+                <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#RAG</span>
+                <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#LLM</span>
+                <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#Ollama</span>
+                <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#llama</span>
+                <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#ML</span>
+            </div>
+            </div>
+        </div>
+        
+        <div class="project-card bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="relative h-48 md:h-64 bg-gray-200" id="pdf-slider">
+                <img src="images/EasyPDFCraft_mainpage.png" alt="EasyPDFCraft_mainpage" class="absolute top-0 left-0 w-full h-full object-cover slide">
+                <img src="images/EasyPDFCraft_compresspdf.png" alt="EasyPDFCraft_compresspdf" class="absolute top-0 left-0 w-full h-full object-cover slide" style="display: none;">
+                <img src="images/EasyPDFCraft_mergepdf.png" alt="EasyPDFCraft_mergepdf" class="absolute top-0 left-0 w-full h-full object-cover slide" style="display: none;">
+                <img src="images/EasyPDFCraft_removepdfpages.png" alt="EasyPDFCraft_removepdfpages" class="absolute top-0 left-0 w-full h-full object-cover slide" style="display: none;">
+                <img src="images/EasyPDFCraft_splitpages.png" alt="EasyPDFCraft_splitpages" class="absolute top-0 left-0 w-full h-full object-cover slide" style="display: none;">
+                <div class="absolute bottom-2 right-2 bg-black bg-opacity-50 text-white text-sm px-2 py-1 rounded">1/5</div>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-semibold text-[#373f4e] mb-2">Easy PDF Craft</h3>
+                <p class="text-gray-600 text-sm mb-4">A web application offering tools to Merge, Split, Compress, and Remove pages from PDF files.</p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="https://easypdfcraft.onrender.com/" class="text-indigo-500 hover:underline text-sm font-medium" target="_blank">Website</a>
+                </div>
+                <div class="mt-4">
+                    <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#WebDevelopment</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#PDF</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#Tools</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#Python</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="relative h-48 md:h-64 bg-gray-200" id="pdf-slider">
+                <img src="images/OpenCV_HSV.jpg" alt="OpenCV_HSV" class="absolute top-0 left-0 w-full h-full object-cover slide">
+                <img src="images/OpenCV_ROI.jpg" alt="OpenCV_ROI" class="absolute top-0 left-0 w-full h-full object-cover slide" style="display: none;">
+                <img src="images/OpenCV_FaceDetection.jpg" alt="OpenCV_FaceDetection" class="absolute top-0 left-0 w-full h-full object-cover slide" style="display: none;">
+                <img src="images/OpenCV_HandGR.jpg" alt="OpenCV_HandGR" class="absolute top-0 left-0 w-full h-full object-cover slide" style="display: none;">
+                <div class="absolute bottom-2 right-2 bg-black bg-opacity-50 text-white text-sm px-2 py-1 rounded">1/5</div>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-semibold text-[#373f4e] mb-2">VisionAI</h3>
+                <p class="text-gray-600 text-sm mb-4">A Flask-based web application for real-time video processing, integrating OpenCV and YOLO for object detection and various video modes.</p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="https://github.com/pavanKumar2812/VisionAI-WebSite/tree/main" class="text-gray-700 hover:underline text-sm font-medium" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7271036165330247680/" class="text-indigo-500 hover:underline text-sm font-medium" target="_blank">LinkedIn Post</a>
+                </div>
+                <div class="mt-4">
+                    <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#OpenCV</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#ComputerVision</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#YOLO</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#Flask</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#ObjectDetection</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">#FaceRecognition</span>
+                </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+    
+        <!-- Modal Code (already present) -->
+        <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+        <div class="relative bg-black rounded-lg shadow-lg max-w-4xl w-full">
+            <button onclick="closeModal()" class="absolute top-2 right-2 text-white text-4xl font-bold z-50 hover:text-gray-300">&times;</button>
+            <video id="modalVideo" class="w-full h-auto rounded-lg" autoplay muted playsinline controls controlsList="nodownload">
+            <source id="modalVideoSource" src="" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+        </div>
+        </div>
     </section>
     
-
-    <!-- Skills and Certifications -->
-    <section id="skills" class="skills-certifications">
-      <div class="skills">
-        <h3>Skills</h3>
-        <div id="radar-chart-wrapper">
-          <canvas id="radar-chart"></canvas>
+    <section id="certifications" class="py-16 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-center text-[#373f4e] mb-8">Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <a href="https://www.credly.com/badges/284d8ee7-213b-4c14-bf62-f4ce6eb30336/public_url" target="_blank" class="bg-white rounded-lg shadow-md p-6 flex items-center space-x-4 hover:shadow-lg transition duration-200">
+                    <img src="images/IBM.png" alt="IBM AI Icon" class="w-8 h-8" />
+                    <div>
+                        <h3 class="text-xl font-semibold text-[#373f4e] mb-1">IBM AI Engineering Professional Certificate (V2)</h3>
+                        <p class="text-gray-600 text-sm">Issued by IBM via Coursera.</p>
+                    </div>
+                </a>
+                <a href="https://www.credly.com/badges/bc782115-c268-4683-b602-3cf665196187/public_url" target="_blank" class="bg-white rounded-lg shadow-md p-6 flex items-center space-x-4 hover:shadow-lg transition duration-200">
+                    <img src="images/GCP.png" alt="Google Cloud Icon" class="w-8 h-8" />
+                    <div>
+                        <h3 class="text-xl font-semibold text-[#373f4e] mb-1">Google Cloud Platform Certified Associate Cloud Engineer</h3>
+                        <p class="text-gray-600 text-sm">Issued by Google Cloud.</p>
+                    </div>
+                </a>
+                <a href="https://www.credly.com/badges/3d0b1090-67d6-4b62-978c-4b500c8f42a7/public_url" target="_blank" class="bg-white rounded-lg shadow-md p-6 flex items-center space-x-4 hover:shadow-lg transition duration-200">
+                    <img src="images/AWS.png" alt="AWS Icon" class="w-8 h-8" />
+                    <div>
+                        <h3 class="text-xl font-semibold text-[#373f4e] mb-1">AWS Cloud Practitioner</h3>
+                        <p class="text-gray-600 text-sm">Issued by Amazon Web Services (AWS).</p>
+                    </div>
+                </a>
+                <a href="https://www.credly.com/badges/e4ddf1d6-0115-40ba-8a9a-e3eb4a9157a2/public_url" target="_blank" class="bg-white rounded-lg shadow-md p-6 flex items-center space-x-4 hover:shadow-lg transition duration-200">
+                    <img src="images/AZ.png" alt="Azure Fundamentals Icon" class="w-8 h-8" />
+                    <div>
+                        <h3 class="text-xl font-semibold text-[#373f4e] mb-1">Microsoft Azure Fundamentals</h3>
+                        <p class="text-gray-600 text-sm">Issued by Microsoft Azure.</p>
+                    </div>
+                </a>
+                <a href="https://www.credly.com/badges/cf309f69-96ee-45b5-a417-4e3596212df5/public_url" target="_blank" class="bg-white rounded-lg shadow-md p-6 flex items-center space-x-4 hover:shadow-lg transition duration-200">
+                    <img src="images/azure-data-fundamentals-600x600.png" alt="Azure Data Icon" class="w-8 h-8" />
+                    <div>
+                        <h3 class="text-xl font-semibold text-[#373f4e] mb-1">Microsoft Azure Data Fundamentals</h3>
+                        <p class="text-gray-600 text-sm">Issued by Microsoft Azure.</p>
+                    </div>
+                </a>
+                <a href="https://www.credly.com/badges/1c0c1abe-2c32-48dc-87f5-f1ed82a8bdc1/public_url" target="_blank" class="bg-white rounded-lg shadow-md p-6 flex items-center space-x-4 hover:shadow-lg transition duration-200">
+                    <img src="images/azure-ai-fundamentals-600x600.png" alt="Azure AI Icon" class="w-8 h-8" />
+                    <div>
+                        <h3 class="text-xl font-semibold text-[#373f4e] mb-1">Microsoft Azure AI Fundamentals</h3>
+                        <p class="text-gray-600 text-sm">Issued by Microsoft Azure.</p>
+                    </div>
+                </a>
+            </div>
         </div>
-      </div>
-      <div class="certifications">
-        <h3>Certifications</h3>
-        <ul>
-          <li>
-            <a>
-              IBM AI Engineering Professional Certificate (V2)
-            </a>
-          </li>
-          <li>
-            <a>
-              Amazon Web Services Cloud Practitioner
-            </a>
-          </li>
-          <li>
-            <a>
-              Google Cloud Certified Associate Cloud Engineer
-            </a>
-          </li>
-          <li>
-            <a>
-              Microsoft Certified: Azure AI Fundamentals
-            </a>
-          </li>
-          <li>
-            <a>
-              Microsoft Certified: Azure Data Fundamentals
-            </a>
-          </li>
-          <li>
-            <a>
-              Microsoft Certified: Azure Fundamentals
-            </a>
-          </li>
-        
-      </div>
     </section>
 
-  <section id="work" class="projects">
-    <h3>Projects</h3>
-    <div class="project-cards">
-      <div class="project-card">
-        <img src="HSV_Mask.jpeg" alt="VisionAI Web Application">
-        <h4>VisionAI Web Application</h4>
-        <p>
-          A Flask web application with real-time video processing features such as object detection, hand gesture recognition, and more. A customizable and interactive tool to explore various computer vision tasks.
-        </p>
-        <a href="https://github.com/pavanKumar2812/VisionAI-WebSite" target="_blank">View on GitHub</a>
-      </div>
-  
-      <div class="project-card">
-        <img src="Deep Learning Models.webp" alt="Deep Learning Models (CNN, LSTM, GAN)">
-        <h4>Deep Learning Models (CNN, LSTM, GAN)</h4>
-        <p>
-          A collection of deep learning notebooks showcasing CNNs, LSTMs, Bi-directional LSTMs, GANs, and more. Explore state-of-the-art machine learning techniques for diverse applications.
-        </p>
-        <a href="https://github.com/pavanKumar2812/TensorFlow" target="_blank">View on GitHub</a>
-      </div>
-  
-      <div class="project-card">
-        <img src="VIT.webp" alt="Image Classification with Vision Transformer">
-        <h4>Image Classification with Vision Transformer</h4>
-        <p>
-          A detailed notebook and trained model (.h5) for image classification tasks using Vision Transformer (ViT) architecture, designed for high accuracy and performance.
-        </p>
-        <a href="https://github.com/pavanKumar2812/TensorFlow" target="_blank">View on GitHub</a>
-      </div>
-    </div>
-  </section>
-  
-  <section id="contact" class="contact">
-    <h3>Contact Me</h3>
-    <div class="contact-details">
-      <p><strong>Phone:</strong> <a href="tel:+918179090163">8179090163</a></p>
-      <p><strong>Email:</strong> <a href="mailto:adinanipavankumar@gmail.com">adinanipavankumar@gmail.com</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/pavan-kumar-adinani-924272232" target="_blank">View Profile</a></p>
-      <p><strong>GitHub:</strong> <a href="https://github.com/pavanKumar2812" target="_blank">View Profile</a></p>
-    </div>
-    <div class="footer-note">
-      <p>© All rights reserved – Pavan Kumar Adinani</p>
-    </div>
-  </section>  
+    <section id="contact" class="py-16 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-center text-[#373f4e] mb-8">Connect with Me</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold text-[#373f4e] mb-4">Contact Information</h3>
+                    <p class="text-gray-600 text-sm mb-2"><i class="fas fa-phone mr-2 text-[#4e576a]"></i> <a href="tel:+918179090163" class="hover:text-[#4e576a] transition">+91 8179090163</a></p>
+                    <p class="text-gray-600 text-sm mb-2"><i class="fas fa-envelope mr-2 text-[#4e576a]"></i> <a href="mailto:adinanipavankumar@gmail.com" class="hover:text-[#4e576a] transition">adinanipavankumar@gmail.com</a></p>
+                    <p class="text-gray-600 text-sm mb-2"><i class="fab fa-github mr-2 text-[#4e576a]"></i> <a href="https://github.com/pavanKumar2812" target="_blank" class="hover:text-[#4e576a] transition">github.com/pavanKumar2812</a></p>
+                    <p class="text-gray-600 text-sm mb-2"><i class="fab fa-linkedin mr-2 text-[#4e576a]"></i> <a href="https://www.linkedin.com/in/pavan-kumar-adinani-924272232/" target="_blank" class="hover:text-[#4e576a] transition">linkedin.com/in/pavan-kumar-adinani-924272232</a></p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-[#373f4e] mb-4">Let's Get in Touch!</h3>
+                    <p class="text-gray-600 text-sm">Feel free to reach out if you have any questions, opportunities, or just want to connect. I'm always open to new collaborations and discussions.</p>
+                    </div>
+            </div>
+        </div>
+    </section>
 
-</main>
+    <footer class="bg-gray-200 py-4 text-center text-gray-600 text-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            &copy; 2025 Pavan Kumar. All Rights Reserved.
+        </div>
+    </footer>
 </body>
 </html>
