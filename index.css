@@ -1,0 +1,56 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f1f5;
+    color: #2e2e2e;
+}
+.logo-font {
+    font-family: 'Gwendolyn', cursive;
+}
+.project-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.video-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background-color: #e2e8f0; /* Placeholder */
+}
+.video-container video {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure video covers the container */
+}
+.play-overlay {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+.video-container:hover .play-overlay {
+    opacity: 0.8;
+}
+.video-container.playing .play-overlay {
+    display: none;
+}
+
+.slide {
+    animation: fade 0.5s ease-in-out;
+}
+
+#pdf-slider img.slide {
+    object-fit: contain; /* Ensures the image is fully visible within the container without cropping, may add empty space */
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
