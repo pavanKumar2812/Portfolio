@@ -31,6 +31,22 @@ $(document).ready(function ()
     });
 
     startPdfImageSlider(); // Initialize PDF image slider
+    
+    // Initialize content manager if it exists
+    if (typeof contentManager !== 'undefined') {
+        contentManager.loadContent();
+    }
+    
+    // Smooth scrolling for navigation links
+    $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+        if (target.length) {
+            event.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top - 80
+            }, 1000);
+        }
+    });
 });
 
 function openModal(videoPath) 

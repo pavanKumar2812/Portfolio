@@ -54,3 +54,142 @@ body {
         opacity: 1;
     }
 }
+
+/* Content sections styling */
+.line-clamp-4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Modal styling for content */
+.prose {
+    max-width: none;
+    line-height: 1.75;
+}
+
+.prose h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1f2937;
+}
+
+.prose h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    margin-top: 1.5rem;
+    color: #374151;
+}
+
+.prose h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    color: #374151;
+}
+
+.prose pre {
+    background-color: #f3f4f6;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+    border: 1px solid #e5e7eb;
+}
+
+.prose code {
+    background-color: #f3f4f6;
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+.prose p {
+    margin-bottom: 1rem;
+    color: #4b5563;
+}
+
+.prose ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.prose li {
+    margin-left: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+/* Telugu text styling */
+.telugu-text {
+    font-family: 'Noto Sans Telugu', 'Telugu MN', 'Telugu Sangam MN', sans-serif;
+    line-height: 1.8;
+}
+
+/* Smooth scrolling for navigation */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+/* Hover effects for content cards */
+.content-card {
+    transition: all 0.3s ease;
+}
+
+.content-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+    .dark-mode {
+        background-color: #1f2937;
+        color: #f9fafb;
+    }
+}
+
+/* Mobile responsive improvements */
+@media (max-width: 768px) {
+    .prose {
+        padding: 0 1rem;
+    }
+    
+    .prose pre {
+        font-size: 0.875rem;
+    }
+}
+
+/* Animation for content loading */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-slide-in {
+    animation: slideInUp 0.6s ease-out;
+}
+
+/* Star rating styling */
+.star-rating {
+    display: inline-flex;
+    align-items: center;
+}
+
+.star-rating svg {
+    width: 1rem;
+    height: 1rem;
+}
