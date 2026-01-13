@@ -31,3 +31,4 @@ coverage/
 .next/
 
 # Misc
+firebase-key.json
